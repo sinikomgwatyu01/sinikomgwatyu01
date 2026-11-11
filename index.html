@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siniko Mgwatyu | IT Support and Computer Science Graduate</title>
+<meta name="description" content="Portfolio of Siniko Mgwatyu, a Computer Science graduate in Johannesburg looking for an IT internship.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --ink: #14202b;
+    --muted: #55626f;
+    --line: #d5dde6;
+    --accent: #2f5d8a;
+    --accent-ink: #ffffff;
+    --ok: #1f8a5b;
+    --ok-bg: #e3f4ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1720;
+      --surface: #16212c;
+      --ink: #e6edf3;
+      --muted: #9aa8b5;
+      --line: #2a3745;
+      --accent: #7fb0e0;
+      --accent-ink: #0f1720;
+      --ok: #52c58f;
+      --ok-bg: #153327;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+  header.top { padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .brand { font-weight: 600; color: var(--ink); text-decoration: none; }
+  nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+  nav a:hover { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  .hero { padding: 3rem 0 2.5rem; }
+  .status {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    background: var(--ok-bg); color: var(--ok);
+    border-radius: 999px; padding: 0.3rem 0.85rem;
+    font-size: 0.9rem; font-weight: 500;
+  }
+  .status::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--ok); }
+  h1 { font-size: clamp(2.1rem, 8vw, 3.2rem); line-height: 1.1; margin: 1.1rem 0 0.6rem; font-weight: 600; letter-spacing: -0.02em; }
+  .lede { font-size: 1.15rem; color: var(--muted); max-width: 36rem; margin: 0 0 1.6rem; }
+  .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 0.7rem 1.15rem; border-radius: 6px;
+    font-weight: 500; text-decoration: none; font-size: 1rem;
+    border: 1px solid var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); }
+  .btn.ghost { color: var(--accent); background: transparent; }
+  .btn:hover { opacity: 0.9; }
+
+  section { padding: 2.2rem 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.45rem; margin: 0 0 1rem; font-weight: 600; letter-spacing: -0.01em; }
+  h3 { font-size: 1.05rem; margin: 0 0 0.2rem; font-weight: 600; }
+  p { margin: 0 0 1rem; max-width: 40rem; }
+  .meta { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.5rem; }
+
+  dl.facts { margin: 0; display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
+  dl.facts dt { font-weight: 600; margin-bottom: 0.15rem; }
+  dl.facts dd { margin: 0; color: var(--muted); max-width: 40rem; }
+
+  ul.plain { list-style: none; margin: 0; padding: 0; }
+  ul.plain li { padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
+  ul.plain li:last-child { border-bottom: 0; }
+  .tag { display: inline-block; font-size: 0.82rem; padding: 0.1rem 0.6rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); margin-left: 0.5rem; vertical-align: middle; }
+  ul.plain a { color: var(--accent); }
+
+  .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+  .skills li { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 0.35rem 0.75rem; font-size: 0.95rem; }
+
+  footer { padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  @media (min-width: 40rem) {
+    dl.facts { grid-template-columns: 12rem 1fr; gap: 1rem 1.5rem; }
+    dl.facts dt { margin: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Siniko Mgwatyu</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <div class="hero">
+      <span class="status">Open to IT internships and graduate roles</span>
+      <h1>Siniko Mgwatyu</h1>
+      <p class="lede">Computer Science graduate in Johannesburg, building practical IT support skills: troubleshooting, user support, asset records and databases.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#projects">See my projects</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p>I completed a BSc in Computer Science at Walter Sisulu University in 2026. My studies covered operating systems, networking, databases and software engineering, which is the groundwork for diagnosing real problems on real computers.</p>
+      <p>Outside the classroom I worked as a Usave Assistant at Usave Shoprite, where I was the first person customers came to when something went wrong. That taught me to listen, find the cause, fix it or escalate it, and follow up until the person is happy. It is the same routine a service desk runs on.</p>
+      <p>I am looking for an internship where I can learn Microsoft 365 support, ticketing tools and IT asset management from an experienced team.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>I am building a small set of projects that show how I work. Each one gets its own repository with a README explaining what it is and how to use it.</p>
+      <ul class="plain">
+        <li>
+          <h3>This portfolio <span class="tag">Live</span></h3>
+          <p class="meta">A simple site hosted on GitHub Pages and written in plain HTML and CSS.</p>
+        </li>
+        <li>
+          <h3>IT troubleshooting guides <span class="tag">In progress</span></h3>
+          <p class="meta">Step-by-step fixes for everyday problems such as Wi-Fi not connecting, printers not working and password resets.</p>
+        </li>
+        <li>
+          <h3>IT asset register template <span class="tag">Planned</span></h3>
+          <p class="meta">A spreadsheet template for recording devices, serial numbers, users and status, with a guide to keeping it accurate.</p>
+        </li>
+        <li>
+          <h3>SQL ticket database <span class="tag">Planned</span></h3>
+          <p class="meta">A small database of users, devices and support tickets, with queries for open tickets and tickets per user.</p>
+        </li>
+      </ul>
+      <p class="meta">When a project is ready, its title will link to the repository on GitHub.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="facts">
+        <dt>Support</dt>
+        <dd>
+          <ul class="skills">
+            <li>Troubleshooting</li><li>Clear communication</li><li>User follow-up</li><li>Escalating issues</li><li>Customer service</li>
+          </ul>
+        </dd>
+        <dt>Systems</dt>
+        <dd>
+          <ul class="skills">
+            <li>Windows</li><li>Microsoft Office</li><li>Operating systems</li><li>Networking fundamentals</li><li>Computer architecture</li>
+          </ul>
+        </dd>
+        <dt>Data and code</dt>
+        <dd>
+          <ul class="skills">
+            <li>SQL (coursework)</li><li>Database concepts</li><li>Java</li><li>Data structures</li><li>Software engineering basics</li>
+          </ul>
+        </dd>
+        <dt>Records and admin</dt>
+        <dd>
+          <ul class="skills">
+            <li>Stock and inventory records</li><li>Accurate data capture</li><li>Following procedures</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+      <ul class="plain">
+        <li>
+          <h3>BSc Computer Science (NQF 7)</h3>
+          <p class="meta">Walter Sisulu University, 2026</p>
+          <p>Modules included Operating Systems, Data Communication and Networking, Database Management Systems, Software Engineering, Data Structures and Programming in Java.</p>
+        </li>
+        <li>
+          <h3>Data Science Foundations, Level 1</h3>
+          <p class="meta">IBM (Cognitive Class), issued September 2024</p>
+        </li>
+        <li>
+          <h3>Microsoft Digital Literacy Certificate</h3>
+        </li>
+        <li>
+          <h3>Usave Assistant, Usave Shoprite</h3>
+          <p class="meta">February to July 2026</p>
+          <p>Handled customer enquiries, processed transactions and cash reconciliation accurately, and supported stock control and record keeping.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>I am available to start an internship or graduate role. Email is the quickest way to reach me.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:sinikomgwatyu01@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/siniko-mgwatyu-746885355">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/yourusername">GitHub</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Siniko Mgwatyu, Johannesburg, South Africa</div>
+</footer>
+
+</body>
+</html>
